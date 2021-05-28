@@ -1,1 +1,9 @@
-# RKearney_GeoParsing
+# GeoParsing *The Deluge: An Historical Novel of Poland, Sweden, and Russia. Vol. 1* by Henryk Sienkiewicz
+***
+## Introduction
+This assignment was my first introduction to GeoParsing. The tutorial provided all the code necessary to get started and provided a text file of Mark Twain's *The Innocence Abroad*. This text file and the text file included in this repo were download from [Project Gutenberg](https://www.gutenberg.org/). *The Deluge* 
+(Potop, 1886) is one of Poland's most famous author's most famous books. The first volume of this historical novel chronicals Poland's wars with Sweden and Russia. Published in 1886, the novel is part of what Poles call "The Trilogy", and was preceded by *With Fire and Sword* (Ogniem i mieczem, 1884) and followed by *Fire in the Steppe* (Pan Wołodyjowski, 1888). 
+
+***
+## The Code
+The code for this assignment begins with the importation of a number of libraries that are used to GeoParse the text. An error is generated while tring to import the "urllib", however, this does not effect the final results. Next, the URL of the txt file is stored as the variable "URL" and passed into the GeoText function. This is used to create a list of place names is stored as the variable "Cities". A new empty list is created and stored as the variable Lat_lon. A for loop iterates through the "Cities" variable and, using OpenStreetMap's "Nominatim" to identify latitude and longitude of place names, it appends the coordinates to the location name in the Lat_lon list. A 2 second timeout was used to idenitfy only locations that can easily be linked to its geolocation. The list of place names and coordinates is converted to a dataframe and collumn names are assigned for "Cities" and "Coordinates". Shapely point are created for all the coordinates and stored as the variable "geometry". A new geodataframe is created combining the original dataframe with the new Shapely geometry information. 
