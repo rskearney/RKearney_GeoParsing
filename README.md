@@ -20,10 +20,10 @@ By applying the transparancy parameters in the plot object, a "color ramp" is es
 
 The biggest issue with using a modern gazetteer like Nominatim with a book that references historical events and locations is that their names may have changed. As a result of the potential discrepancies that might arise in location identification or resolution, a historic gazetteer may be better for this puprose.
 
-**How accurate do you think the outputs are? Are there any city names that seem suspect? If so, what are some Natural Language Processing methods that you could use to filter words that might be city names, but probably weren't intended as city references in the text?**
+**2) How accurate do you think the outputs are? Are there any city names that seem suspect? If so, what are some Natural Language Processing methods that you could use to filter words that might be city names, but probably weren't intended as city references in the text?**
 
 There results seem suprisingly accurate, however, there is one city name that might have been incorrectly idenified multiple times: "Of". Using Natural Language Processing methods that can identify the context in which words are being used and would help to filter out some words that were not intended to be the names of locations.
 
-**What are some alternative approaches to mapping the data? The tutorial here uses duplicate entries and opacity to present a type of "color ramp": could this be done better?**
+**3) What are some alternative approaches to mapping the data? The tutorial here uses duplicate entries and opacity to present a type of "color ramp": could this be done better?**
 
 Dublicates could be removed by creating a pandas dataframe that calculates the count for each unique location and appends the count to the unique location name. A palette could then be applied to more accuately show frequency. 
